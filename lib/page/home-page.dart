@@ -27,8 +27,9 @@ class _HomePageState extends State<HomePage> {
               padding: const EdgeInsets.all(5.0),
               alignment: Alignment.center,
               decoration: BoxDecoration(
-                  color: Colors.grey,
-                  borderRadius: BorderRadius.all(Radius.circular(15.0))),
+                color: Color.fromARGB(50, 255, 255, 255),
+                borderRadius: BorderRadius.circular(10),
+              ),
               child: Image(
                 image: AssetImage('assets/male.png'),
                 width: 130,
