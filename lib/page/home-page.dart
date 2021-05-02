@@ -34,7 +34,7 @@ class _HomePageState extends State<HomePage> {
                   child: ElevatedButton(
                     style: ButtonStyle(
                       backgroundColor: MaterialStateProperty.all(
-                          _genero ? Colors.blueAccent[500] : Colors.grey[900]),
+                          _genero ? Colors.blue[500] : Colors.grey[900]),
                       padding: MaterialStateProperty.all(EdgeInsets.all(10)),
                       shape: MaterialStateProperty.all(
                         RoundedRectangleBorder(
@@ -297,7 +297,17 @@ class _HomePageState extends State<HomePage> {
                   style: ButtonStyle(
                       backgroundColor:
                           MaterialStateProperty.all<Color>(Colors.pink)),
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => ResultadoPagina(
+                                  edad: _edad,
+                                  estaturaCm: _estaturaCm,
+                                  peso: _peso,
+                                  genero: _genero,
+                                )));
+                  },
                   child: Text(
                     "Calcular",
                     style: TextStyle(
